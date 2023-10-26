@@ -1,0 +1,17 @@
+.bg-color{
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.container-img{
+    margin-top: 20px;
+}
+.container-head{
+    margin: 20px 0;
+}
+.container-head{
+    text-align: center;
+}
