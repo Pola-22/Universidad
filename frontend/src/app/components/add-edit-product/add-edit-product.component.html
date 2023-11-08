@@ -1,0 +1,29 @@
+<div class="container text-center form">
+    <div class="row mt-4">
+        <div class="col-md-12 offset-md-6">
+            <div class="card text-white bg-secondary mb-3">
+                <div class="card-header">{{oparation}} producto</div>
+                <div class="card-body">
+                    <form [formGroup]="form" (ngSubmit)="newUpdateProduct()">
+                        <input formControlName="name" type="text" class="form-control mt-2"placeholder="Nombre del producto">
+                        <span *ngIf="form.get('name')?.hasError('required') && form.get('name')?.touched">
+                            <strong>Campo requerido</strong>
+                        </span>
+                        <input formControlName="description" type="text" class="form-control mt-2"placeholder="Descripción del producto">
+                        <span *ngIf="form.get('description')?.hasError('required') && form.get('description')?.touched">
+                            <strong>Campo requerido</strong>
+                        </span>
+                        <input formControlName="price" type="number" class="form-control mt-2" placeholder="Precio del producto">
+                        <span *ngIf="form.get('price')?.hasError('required') && form.get('price')?.touched">
+                            <strong>Campo requerido</strong>
+                        </span>
+                        <input formControlName="stock" type="number" class="form-control mt-2" placeholder="Stock disponible">
+                        
+                        <button [disabled]="form.invalid" type="submit"  class="btn btn-success mt-4 mx-4">Guardar</button>
+                        <button routerLink="/" type="button" class="btn btn-danger mt-4">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
