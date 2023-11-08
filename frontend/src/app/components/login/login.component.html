@@ -1,0 +1,25 @@
+<div class="container text-center form">
+  <div class="row mt-4">
+      <div class="col-md-12 offset-md-6">
+          <div class="card text-white bg-secondary mb-3">
+              <div class="card-header mt-2">
+                    <img src="../../../assets/img/ima2.png" alt="Imagen de login">
+              </div>
+              <div class="card-body">
+                  <form [formGroup]="form" (ngSubmit)="login()">
+                      <span *ngIf="form.get('userName')?.hasError('required') && form.get('userName')?.touched">
+                          <strong>Campo requerido</strong>
+                      </span>
+                      <input formControlName="userName" type="text" class="form-control mt-5"placeholder="Nombre de usuario">
+                      <span *ngIf="form.get('password')?.hasError('required') && form.get('password')?.touched">
+                          <strong>Campo requerido</strong>
+                      </span>
+                      <input formControlName="password" type="password" class="form-control mt-4"placeholder="Contraseña">
+
+                      <button [disabled]="form.invalid" type="submit" class="btn btn-primary mt-5">Iniciar sesión</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

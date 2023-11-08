@@ -1,0 +1,26 @@
+.container-tm{
+    max-width: 700px;
+}
+.producto{
+    background-color: #A4D9DF;
+    border-radius: 20px;
+}
+.descripcion{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.img-producto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    margin: 0;
+    color: black;
+}
+img{
+    max-width: 100%;
+    height: 80%;
+}

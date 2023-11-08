@@ -1,0 +1,11 @@
+<div class="container container-tm">
+    <div *ngFor="let item of listProduct" class="row mt-3 producto">
+        <div class="col-6 img-producto">
+            <img src="../../../assets/img/{{ item.imagen }}" alt="Imagen de productos">
+        </div>
+        <div class="col-6 descripcion">
+            <p>{{ item.nombre }}</p>
+            <p>{{ item.descripcion }}</p>
+        </div>
+    </div>
+</div>
